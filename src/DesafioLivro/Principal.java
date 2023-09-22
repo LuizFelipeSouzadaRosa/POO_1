@@ -47,12 +47,12 @@ public class Principal {
 
 	}
 	
-	static void buscaPorAutor(ArrayList<Autor> autores) {
+	static void buscaPorAutor(ArrayList<Livro> livros) {
 		String autor = JOptionPane.showInputDialog("Autor:");
 		String dados = "";
-		for( Autor a : autores ) {
-			if(a.nomeAutor.equalsIgnoreCase(autor)) {
-				dados += a.exibirAutor();
+		for( Livro l : livros ) {
+			if(l.getAutorores().equalsIgnoreCase(autor)) {
+				dados += l.exibirAutor();
 			}
 		}
 		JOptionPane.showMessageDialog(null, dados);
